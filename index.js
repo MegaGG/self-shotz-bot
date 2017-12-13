@@ -67,9 +67,8 @@ bot.on("message", async message => {
             msg_array.map(m => m.delete().catch(console.error));
         });
     }
-    if (message.content.startsWith(prefix + "shutdown")) {
-        const msg = await message.channel.send("Selfbot shutting down...");
-        msg.edit("Selfbot has successfully shutdown. Exit code: 0");
+    if (message.content.startsWith(prefix + "restart")) {
+        message.reply("Selfbot  restarting...");
         process.exit(0);
         
     }

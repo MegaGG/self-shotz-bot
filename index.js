@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 const config = require('./JSON/config.json')
 const prefix = config.prefix;
 
-bot.login("Insert Token Here");
+bot.login(process.env.SELF_TOKEN);
 
 bot.on("ready", () => {
     console.log(`${bot.user.tag} has logged in...`)
